@@ -1,0 +1,107 @@
+{
+  "theme": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + Green Official Theme",
+  "typography": {
+    "heading_font": "Work Sans",
+    "body_font": "IBM Plex Sans",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-bold tracking-tight text-slate-900",
+      "h2": "text-2xl sm:text-3xl font-semibold tracking-tight text-slate-800",
+      "h3": "text-xl sm:text-2xl font-medium text-slate-800",
+      "body": "text-sm sm:text-base leading-relaxed text-slate-700",
+      "labels": "text-xs font-semibold uppercase tracking-[0.1em] text-slate-500"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "hsl(158, 64%, 22%)",
+      "foreground": "hsl(0, 0%, 100%)",
+      "hover": "hsl(158, 64%, 18%)"
+    },
+    "secondary": {
+      "DEFAULT": "hsl(158, 20%, 90%)",
+      "foreground": "hsl(158, 64%, 22%)"
+    },
+    "background": {
+      "light": "hsl(0, 0%, 98%)",
+      "dark": "hsl(158, 10%, 10%)"
+    },
+    "surface": {
+      "light": "hsl(0, 0%, 100%)",
+      "dark": "hsl(158, 10%, 15%)"
+    },
+    "border": "hsl(158, 15%, 85%)",
+    "text": {
+      "primary": "hsl(158, 10%, 15%)",
+      "muted": "hsl(158, 10%, 45%)"
+    },
+    "status": {
+      "success": "hsl(142, 71%, 45%)",
+      "warning": "hsl(38, 92%, 50%)",
+      "danger": "hsl(0, 84%, 60%)"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "Use crisp, semi-transparent shadows. e.g., shadow-[0_4px_12px_rgba(22,101,52,0.08)]",
+    "borders": "1px solid border on cards and tables for technical/bureaucratic precision.",
+    "radius": "rounded-md (6px) to rounded-lg (8px) for a structured, formal feel without being too rigid."
+  },
+  "component_guidelines": {
+    "buttons": "Pill-shaped or slightly rounded (rounded-md). High contrast on hover. Include transition-colors duration-200.",
+    "forms": "Inputs must have clear borders and a very subtle focus ring (focus:ring-2 focus:ring-primary/20). Labels must be bold and clear.",
+    "tables": "Data-dense layout. Use py-2 px-3 for cells. Alternating row colors (bg-muted/30) can be used for readability.",
+    "cards": "Flat solid background with 1px border. No heavy shadows. Use for dashboard metric summaries.",
+    "dialogs": "Use for quick actions like 'Checkout Visitor' or 'View Visitor Details' to keep context.",
+    "toasts": "Use 'sonner' for all success/error notifications (e.g., check-in successful)."
+  },
+  "layouts": {
+    "dashboard": "Sidebar navigation (w-64) on desktop, collapsed on mobile. Main content area with max-w-7xl constraint and generous padding (p-6 to p-8).",
+    "grid": "Use 'bento' grid principles for the dashboard summary. Example: grid-cols-1 md:grid-cols-2 lg:grid-cols-4 for top metrics.",
+    "login": "Split screen layout. Left side: High-quality abstract green building background with a dark overlay. Right side: Clean, centered login form with Google and JWT options."
+  },
+  "motion": {
+    "hover_states": "Buttons and list items must have distinct hover states (darker shade or slight background shift).",
+    "transitions": "Use transition-colors duration-200 ease-in-out for interactive elements. Exclude transform from universal transitions.",
+    "page_load": "Subtle fade-in for dashboard components."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text against the primary green meets at least 4.5:1 contrast. Use pure white for text on primary buttons.",
+    "focus": "All interactive elements must show a clear focus ring for keyboard navigation.",
+    "aria": "Use proper aria-labels for icon-only buttons."
+  },
+  "media": {
+    "icons": "Use 'lucide-react' for consistency (user, log-in, check-circle, clock, map-pin, users, file-text).",
+    "image_urls": {
+      "login_background": {
+        "url": "https://images.unsplash.com/photo-1780639681636-d5e1878d567e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2UlMjByZWNlcHRpb24lMjBkZXNrfGVufDB8fHx8MTc4MzYwMjgzMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern hallway with sunlight, potted plants, and a long counter. Use on the left half of the login screen with a subtle dark green overlay."
+      },
+      "logo_placeholder": {
+        "url": "https://images.unsplash.com/photo-1709290649154-54c725bd4484?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGdyZWVuJTIwbG9nb3xlbnwwfHx8fDE3ODM2MDI4Mzd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract green object. Use as a placeholder for the National Bureau of Statistics logo."
+      }
+    }
+  },
+  "testing": {
+    "attributes": "All interactive elements MUST include a 'data-testid' attribute (e.g., data-testid='visitor-submit-button')."
+  },
+  "instructions_to_main_agent": [
+    "You are building a Front Desk Visitors Register for the National Bureau of Statistics.",
+    "Ensure all `.js` components use modern React functional patterns. (Do not output .tsx files).",
+    "Install and use `lucide-react` for icons and `sonner` for toast notifications.",
+    "The UI must feel authoritative, clean, and data-dense (Admin Panel context).",
+    "Use a specific dark green tone (primary) for the main theme to represent the national statistical office.",
+    "Do NOT use 'Inter' for headings. Use 'Work Sans' or a similar geometric sans for headings, and 'IBM Plex Sans' for body data.",
+    "Never use `transition: all`. Target specific properties like `transition-colors`.",
+    "Do not add `.App { text-align: center; }` to the global CSS. Everything should be left-aligned by default for readability.",
+    "Do not use fully transparent backgrounds for interactive dropdowns or sticky headers.",
+    "Include 'data-testid' on all buttons, links, and forms."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Avoid generic centered layouts and simplistic gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Every interaction needs micro-animations - hover states, transitions. Static = dead.",
+    "Use 'sonner' for toasts.",
+    "Ensure all interactive and key informational elements have 'data-testid'."
+  ]
+}
